@@ -13,7 +13,7 @@ function onTick()
 	until value < 1
 	
 	for i = 1, #fbt do
-		output.setBool(i, fbt[i])
+		output.setBool(19 - (i + #fbt), fbt[i])
 	end
 end
 
