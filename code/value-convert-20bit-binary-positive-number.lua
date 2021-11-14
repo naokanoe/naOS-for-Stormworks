@@ -1,7 +1,7 @@
-function onTick()
 --positive integer number to 20 bit binary
 --if negative, to convert positive
---if number is over 2^21(=2097152), to hold down 2^21-1(=2097151)
+--if number is over 2^21(=2,097,152), to hold down 2^21-1(=2,097,151)
+function onTick()
 	value = input.getNumber(1) >= 2 ^ 21 and 2 ^ 21 - 1 or math.floor(math.abs(input.getNumber(1)))
 	nbt = {}
 	fbt = {}
@@ -17,6 +17,7 @@ function onTick()
 	end
 end
 
+--Connect Monitor Output
 function onDraw()
 	w = screen.getWidth()
 	h = screen.getHeight()					
