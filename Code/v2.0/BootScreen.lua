@@ -39,7 +39,7 @@ function onDraw()
 	w = screen.getWidth()				  -- Get the screen's width and height
 	h = screen.getHeight()
 	r = h / 4
-	py = - h / 6
+	py = - h / 4.5
 	
 	if mosw then
 				
