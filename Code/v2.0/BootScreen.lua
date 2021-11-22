@@ -38,17 +38,17 @@ end
 function onDraw()
 	w = screen.getWidth()				  -- Get the screen's width and height
 	h = screen.getHeight()
+	r = h / 4
+	py = - h / 6
 	
 	if mosw then
 				
-		screen.setColor(255, 0, 128)
-		screen.drawRectF(w * 3 / 8 - 1, h / 3 - 5, w / 8, 8)
-		screen.setColor(0, 128, 255)
-		screen.drawRectF(w / 2 + 1, h / 3 - 5, w / 8, 8)
-		screen.setColor(255, 255, 0)
-		screen.drawRectF(w * 3 / 8 - 1, h / 3 + 5, w / 8, 8)
-		screen.setColor(0, 255, 0)
-		screen.drawRectF(w / 2 + 1, h / 3 + 5, w / 8, 8)
+		screen.drawCircle(w / 2, h / 2 + py, r)
+		screen.drawLine(w / 2,h / 2 + py - r , w / 2, h / 2 + py + r)
+		screen.drawLine(w / 2 - math.sqrt(3) / 2 * r, h / 2 + py - r / 2, w / 2 - math.sqrt(3) / 2 * r, h / 2 + py + r / 2)
+		screen.drawLine(w / 2 - math.sqrt(3) / 2 * r, h / 2 + py - r / 2, w / 2, h / 2 + py + r)
+		screen.drawLine(w / 2 + math.sqrt(3) / 2 * r, h / 2 + py + r / 2, w / 2, h / 2 + py - r)
+		screen.drawLine(w / 2, h / 2 + py, w / 2 + math.sqrt(3) / 3 * r, h / 2 + py)
 
 		r1 = 3
 		r2 = 6	
